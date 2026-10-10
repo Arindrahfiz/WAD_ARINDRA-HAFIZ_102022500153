@@ -6,7 +6,7 @@ $koneksi = mysqli_connect("localhost", "root", "", "db_inventaris");
 if (isset($_GET['hapus'])) {
     $id = (int) $_GET['hapus'];
     mysqli_query($koneksi, "DELETE FROM vendors WHERE id = $id");
-    header("Location: index.php");
+    header("Location: ConnectDb.php");
     exit;
 }
 
@@ -78,7 +78,7 @@ $jumlah = mysqli_num_rows($hasil);
                     </td>
                     <td>
                         <a href="StrukturDanLogika.php?id=<?php echo $row['id']; ?>" class="tombol tombol-abu tombol-kecil">Edit</a>
-                        <a href="StrukturDanLogika.php?hapus=<?php echo $row['id']; ?>" class="tombol tombol-merah tombol-kecil"
+                        <a href="ConnectDb.php?hapus=<?php echo $row['id']; ?>" class="tombol tombol-merah tombol-kecil"
                            onclick="return confirm('Yakin ingin menghapus vendor ini?')">Hapus</a>
                     </td>
                 </tr>

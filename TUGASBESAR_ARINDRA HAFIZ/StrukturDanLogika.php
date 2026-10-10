@@ -17,7 +17,7 @@ $data = array();
 foreach ($kolom as $k) {
     $data[$k] = "";
 }
-$data['status'] = 0;
+$data['status'] = 1;
 
 //Untuk Edit mode
 if ($id > 0) {
